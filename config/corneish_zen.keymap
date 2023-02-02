@@ -59,17 +59,17 @@
             label = "BASE";
             bindings = <
             &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
-            &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp AS(SQT)
-            &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp AS(COMMA) &kp AS(DOT) &kp AS(FSLH)
+            &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp SQT
+            &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH
             &kp LSHFT &mo NUM &kp LGUI &kp SPACE &mo NAV &kp C_MUTE
             >;
         };
         numpad_layer {
             label = "NUM";
             bindings = <
-            &kp TAB &kp AS(SEMI) &kp LPAR &kp RPAR &kp AS(BSLH) &kp AS(FSLH) &kp AS(N7) &kp AS(N8) &kp AS(N9) &kp AS(MINUS)
-            &sk LSHFT &sk LCTRL &sk LALT &sk LGUI &sk CAPS &kp AS(COMMA) &kp AS(N4) &kp AS(N5) &kp AS(N6) &kp AS(EQUAL)
-            &kp LA(MINUS) &kp AS(GRAVE) &kp AS(LBKT) &kp AS(RBKT) &kp LS(LA(MINUS)) &kp AS(N0) &kp AS(N1) &kp AS(N2) &kp AS(N3) &kp AS(DOT)
+            &kp TAB &kp SEMI &kp LPAR &kp RPAR &kp BSLH &kp FSLH &kp N7 &kp N8 &kp N9 &kp MINUS
+            &sk LSHFT &sk LCTRL &sk LALT &sk LGUI &sk CAPS &kp COMMA &kp N4 &kp N5 &kp N6 &kp EQUAL
+            &kp LA(MINUS) &kp GRAVE &kp LBKT &kp RBKT &kp LS(LA(MINUS)) &kp N0 &kp N1 &kp N2 &kp N3 &kp DOT
             &trans &trans &trans &trans &trans &trans
             >;
         };
