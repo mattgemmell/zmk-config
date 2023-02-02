@@ -14,7 +14,7 @@
 #define NAV		2
 #define SYS		3
 
-#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+#define AS(keycode) &as LS(keycode) keycode
 
 / {
   chosen {
@@ -33,6 +33,11 @@
     };
 };
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
+
 / {
     behaviors {
         as: auto_shift {
@@ -45,31 +50,24 @@
             bindings = <&kp>, <&kp>;
         };
     };
-};
 
-&sk {
-    release-after-ms = <2000>;
-    quick-release;
-};
-
-/ {
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             label = "BASE";
             bindings = <
             &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I     &kp O   &kp P
-            &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   &kp SQT
-            &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp FSLH
+            &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K     &kp L   AS(SQT)
+            &kp Z &kp X &kp C &kp V &kp B &kp N &kp M AS(COMMA) AS(DOT) AS(FSLH)
             &kp LSHFT &mo NUM &kp LGUI &kp SPACE &mo NAV &kp C_MUTE
             >;
         };
         numpad_layer {
             label = "NUM";
             bindings = <
-            &kp TAB &kp SEMI &kp LPAR &kp RPAR &kp BSLH &kp FSLH &kp N7 &kp N8 &kp N9 &kp MINUS
-            &sk LSHFT &sk LCTRL &sk LALT &sk LGUI &sk CAPS &kp COMMA &kp N4 &kp N5 &kp N6 &kp EQUAL
-            &kp LA(MINUS) &kp GRAVE &kp LBKT &kp RBKT &kp LS(LA(MINUS)) &kp N0 &kp N1 &kp N2 &kp N3 &kp DOT
+            &kp TAB AS(SEMI) &kp LPAR &kp RPAR AS(BSLH) AS(FSLH) AS(N7) AS(N8) AS(N9) AS(MINUS)
+            &sk LSHFT &sk LCTRL &sk LALT &sk LGUI &sk CAPS AS(COMMA) AS(N4) AS(N5) AS(N6) AS(EQUAL)
+            &kp LA(MINUS) AS(GRAVE) AS(LBKT) AS(RBKT) &kp LS(LA(MINUS)) AS(N0) AS(N1) AS(N2) AS(N3) AS(DOT)
             &trans &trans &trans &trans &trans &trans
             >;
         };
