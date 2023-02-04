@@ -89,7 +89,7 @@
             bindings = <
             &kp ESC &none &none &none &none &kp PG_UP &kp LS(LG(LBKT)) &kp UP &kp LS(LG(RBKT)) &kp BSPC
             &sk LSHFT &sk LCTRL &sk LALT &sk LGUI &sk CAPS &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &none
-            &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &kp LS(LG(Z)) &none &kp LG(SPACE) &kp TAB &none &kp RET
+            &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &kp LS(LG(Z)) &none &kp LG(SPACE) &none &none &kp RET
             &trans &trans &trans &trans &trans &trans
             >;
         };
